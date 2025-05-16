@@ -1,3 +1,7 @@
+# This file implements a human detection and segmentation module using a YOLOv7-mask model with post-processing via Detectron2, 
+# enabling real-time person localization, mask extraction, and visualization on RGB images.
+# It supports confidence-based filtering, background masking, and ROI refinement for downstream robot perception tasks.
+
 import cv2
 import torch
 import yaml
