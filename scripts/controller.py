@@ -1,3 +1,6 @@
+# This file defines a basic PID (Proportional-Integral-Derivative) controller class to compute control signals based on the current error, 
+# enabling smooth and stable regulation in feedback control systems.
+# It supports dynamic correction using proportional, integral, and derivative error components.
 
 
 class PID:
