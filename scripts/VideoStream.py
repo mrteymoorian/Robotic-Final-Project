@@ -1,3 +1,7 @@
+# This file defines a `VideoStream` class to interface with a webcam, enabling real-time image capture, resizing, and display with basic 
+# controls to start and stop the video feed.
+# It serves as a utility for acquiring live frames for downstream computer vision applications.
+
 import cv2
 
 #image.shape[0] = width
