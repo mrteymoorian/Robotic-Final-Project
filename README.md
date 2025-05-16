@@ -1,65 +1,69 @@
-Human Tracking Robot Perception Stack
-=====================================
+# Human Tracking Robot: Perception Stack
 
-This repository contains the code for a perception stack designed and developed for a human tracking robot. The perception stack utilizes deep learning-based systems for person detection and re-identification.
+This repository provides the perception module for a human-tracking robot. It employs deep learning-based techniques for detecting and re-identifying individuals in the environment.
 
-Dependencies
-------------
+## Requirements
 
-The following dependencies are required to run the code:
+To run this codebase, the following dependencies must be installed:
 
--   PyTorch
--   OpenCV
--   NumPy
+- PyTorch  
+- OpenCV  
+- NumPy  
 
-Installation
-------------
-Create a virtual environment in the root directory:
+## Setup Instructions
 
-`pip install virtualenv`
+1. Create a virtual environment in the root folder:
 
-`virtualenv <env name>`
+   ```bash
+   pip install virtualenv
+   virtualenv <env_name>
+   ```
 
-To activate the environment:
+2. Activate the environment:
 
-`source <env name>/bin/activate`
+   ```bash
+   source <env_name>/bin/activate
+   ```
 
-Clone the repository: 
+3. Install all necessary packages:
 
-`git clone https://github.com/Ashwij3/Human_following_robot.git`
+   ```bash
+   pip install -r requirements.txt
+   ```
 
-To install the dependencies, run the following command:
+## How to Use
 
-`pip install -r requirements.txt`
+1. Begin by setting up SSH communication between your local machine and the Triton robot. Follow the instructions in this [documentation](https://gitlab.com/HCRLab/stingray-robotics/triton_docs).
 
-Usage
------
+2. On the Triton robot, launch the `stingray_camera` package:
 
-To use the perception stack, run the following command:
+   ```bash
+   cd ~/catkin_ws
+   source devel/setup.bash
+   roslaunch stingray_camera triton.launch
+   ```
 
-Copy code
+3. Then, on your local machine, run the perception system:
 
-`python3 scripts/main.py`
+   ```bash
+   python3 scripts/main.py
+   ```
 
-Algorithms used
----------------
+## Algorithms Integrated
 
-The perception stack utilizes the following algorithms:
+This stack includes:
 
--   YOLOv7 for human detection and instance segmentation
--   SuperPoint for feature extraction and matching
+- **YOLOv7** for detecting and segmenting humans  
+- **SuperPoint** for extracting and matching visual features  
 
-Results
--------
+## Performance
 
-The implemented perception stack achieves accurate identification of the target individual, allowing for effective human tracking by the robot.
+The system reliably identifies and tracks a specific person, enabling the robot to follow them effectively.
 
-Acknowledgments
----------------
+## References
 
-The code in this repository is based on the following research papers:
+This work incorporates methods and code from the following projects and publications:
 
--   [SuperPoint: Self-Supervised Interest Point Detection and Description](https://arxiv.org/abs/1712.07629)
--   [YOLO-v7](https://github.com/WongKinYiu/yolov7/tree/mask)
--   [Magic Leap](https://github.com/magicleap/SuperPointPretrainedNetwork)
-
+- [SuperPoint: Self-Supervised Interest Point Detection and Description](https://arxiv.org/abs/1712.07629)  
+- [YOLOv7 Repository](https://github.com/WongKinYiu/yolov7/tree/mask)  
+- [Magic Leap’s SuperPoint Network](https://github.com/magicleap/SuperPointPretrainedNetwork)
