@@ -1,3 +1,8 @@
+# This file defines and wraps a PyTorch implementation of the SuperPoint network for real-time keypoint detection and descriptor extraction.
+# It includes the SuperPoint model architecture, fast non-maximal suppression, descriptor interpolation, and a two-way nearest 
+# neighbor matcher for robust feature matching between images.
+
+
 import torch
 import numpy as np
 import time
