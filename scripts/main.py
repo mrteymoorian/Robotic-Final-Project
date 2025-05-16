@@ -1,3 +1,6 @@
+# This file implements a ROS-based human tracking system that detects, identifies, and follows a person using RGB-D camera input, feature descriptors (SuperPoint), color histograms, and PID controllers for smooth robot motion.
+# It integrates perception and control to enable real-time person-following behavior with spatial alignment and velocity publishing via ROS topics.
+
 import cv2
 import numpy as np
 import rospy
